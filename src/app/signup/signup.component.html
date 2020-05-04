@@ -1,0 +1,125 @@
+<!------ Include the above in your HEAD tag ---------->
+<div class="container">
+           <div class="col-md-8">
+            <h1 class="entry-title">
+                <span>Sign Up</span>
+            </h1>
+            <hr>
+            <form class="form-horizontal" [formGroup]="signUpForm">
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Email ID
+                        <span class="text-danger">*</span>
+                    </label>
+                    <div class="col-md-8 col-sm-9">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-envelope"></i>
+                            </span>
+                            <input type="email"  [ngClass]="{'border-red': signUpForm.controls.email.status === 'INVALID' && isSubmitClicked}" name="Submit" class="form-control" formControlName="email" name="email" id="emailid" placeholder="Enter your Email ID">
+                        </div>
+                       <p class="color-red" id="email-required-msg" *ngIf="isSubmitClicked && signUpForm.controls.email.errors && signUpForm.controls.email.errors.required" >Email cannot be empty</p>
+                       <p class="color-red" id="email-`pattern-msg" *ngIf="isSubmitClicked && signUpForm.controls.email.errors && signUpForm.controls.email.errors.pattern" >Please enter a valid email address</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Set Password
+                        <span class="text-danger">*</span>
+                    </label>
+                    <div class="col-md-5 col-sm-8">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-lock"></i>
+                            </span>
+                            <input type="password"  [ngClass]="{'border-red': signUpForm.controls.password.status === 'INVALID' && isSubmitClicked}"  class="form-control" name="password" id="password" formControlName= "password" placeholder="Choose password (5-15 chars)" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Confirm Password
+                        <span class="text-danger">*</span>
+                    </label>
+                    <div class="col-md-5 col-sm-8">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-lock"></i>
+                            </span> 
+                            <input type="password" class="form-control" name="cpassword" [ngClass]="{'border-red': signUpForm.controls.cpassword.status === 'INVALID' && isSubmitClicked}" id="cpassword" formControlName= "cpassword" placeholder="Confirm your password" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Full Name
+                        <span class="text-danger">*</span>
+                    </label>
+                    <div class="col-md-8 col-sm-9">
+                        <input type="text" class="form-control" name="mem_name" id="mem_name" [ngClass]="{'border-red': signUpForm.controls.mem_name.status === 'INVALID' && isSubmitClicked}" formControlName= "mem_name" placeholder="Enter your Name here" value="">
+                    </div>
+                </div>
+                                <div class="form-group">
+                    <label class="control-label col-sm-3">Gender
+                        <span class="text-danger">*</span>
+                    </label>
+                    <div class="col-md-8 col-sm-9">
+                        <label>
+                            <input name="gender" type="radio" value="Male" formControlName= "Male" checked formControlName= "gender"> Male </label>
+
+                        <label>
+                            <input name="gender" type="radio"  value="Female" formControlName= "gender"> Female </label>
+                    <p class="color-red" *ngIf="signUpForm.controls.gender.status === 'INVALID' && isSubmitClicked" >Gender must be selected</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Contact No.
+                        <span class="text-danger">*</span>
+                    </label>
+                    <div class="col-md-5 col-sm-8">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-phone"></i>
+                            </span>
+                            <input type="text" class="form-control" name="contactnum" id="contactnum" [ngClass]="{'border-red': signUpForm.controls.contactnum.status === 'INVALID' && isSubmitClicked}" formControlName= "contactnum" formControlName= "contactnum" placeholder="Enter your Primary contact no." value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Alternate No.
+                        <br>
+                        <small>(if any)</small>
+                    </label>
+                    <div class="col-md-5 col-sm-8">
+                        <input type="text" class="form-control" name="contactnum2" id="contactnum2" formControlName= "contactnum2" placeholder="Any other or Landline no (if any)"
+                            value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Security Code </label>
+                    <div class="col-md-5 col-sm-8">
+                        <div>
+
+                            <input type="text" name="captcha" id="captcha" class="form-control label-warning" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-offset-3 col-md-8 col-sm-9">
+                        <span class="text-muted">
+                            <span class="label label-danger">Note:-</span> By clicking Sign Up, you agree to our
+                            <a href="#">Terms</a> and that you have read our
+                            <a href="#">Policy</a>, including our
+                            <a href="#">Cookie Use</a>.</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-offset-3 col-xs-10">
+                        <button name="submit" id="submit-button" value="Sign Up" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-offset-3 col-xs-10">
+                        <button name="" id="list-button" value="List" class="btn btn-primary"  routerLink="/list"> List</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>

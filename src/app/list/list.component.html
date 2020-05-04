@@ -1,0 +1,68 @@
+
+
+<!------ Include the above in your HEAD tag ---------->
+<div class="container">
+  
+<h2>EMPLOYEE DATA</h2>
+
+<h3>Add an employer</h3>
+  <div class="row">
+    <div class="col-md-8">
+      <form class="form-horizontal" *ngIf="employeeData">
+      <div class="form-group">
+        <label class="control-label col-sm-3"> Employee Name</label>
+        <div class="col-md-8 col-sm-9">
+          <input type="text" class="form-control" name="employee_name" id="employee_name" placeholder="Enter Employee Name here"
+            [(ngModel)]="employeeData.employee_name">
+            <br>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-3">Employee Salary </label>
+        <div class="col-md-8 col-sm-9">
+          <input type="text" class="form-control" name="employee_salary" id="employee_salary" placeholder="Enter your Employee salary here"  [(ngModel)]="employeeData.employee_salary">
+        </div>      
+      </div>
+      <br>
+      <div class="form-group">
+        <label class="control-label col-sm-3"> Employee Age </label>
+        <div class="col-md-8 col-sm-9">
+          <input type="text" class="form-control" name="employee_age" id="employee_age" placeholder="Enter the Age"
+          [(ngModel)]="employeeData.employee_age">
+        </div>
+      </div>
+      <br>
+      <div class="form-group">
+        <div class="col-xs-offset-3 col-xs-10">
+            <button name="update" id="update" value="update" class="btn btn-primary"(click)="onClickSave()"> CREATE </button>
+        </div>
+    </div>
+    </form>
+    </div>
+  </div>
+
+
+<table style="width:100%">
+  <tr>
+    <th>Sr No</th>
+    <th>Name</th> 
+    <th>Salary</th>
+    <th>Age</th>
+    <th>Image</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let employee of listData;let i = index">
+    <td>{{i+1}}</td>
+    <td>{{employee.employee_name}}</td>
+    <td>{{employee.employee_salary}}</td>
+    <td>{{employee.employee_age}}</td>
+    <td>{{employee.profile_image}}</td>
+    <td><button type="button" class="btn btn-primary" (click)="onClickEdit(employee)">EDIT</button></td>
+    <td><button type="button" class="btn btn-primary">DELETE</button></td>
+  </tr>
+</table>
+
+
+</div>
+

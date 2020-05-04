@@ -1,0 +1,108 @@
+    /* Coded with love by Mutiullah Samim */
+    
+    body, html {
+        margin-left: 50px;
+        height: 100%;
+        padding-left: 500px;
+        background: #60a3bc;
+    }
+        .body_over {
+            margin: auto;
+            height: 900px !important;
+            position: center;
+            background: linear-gradient(rgba(246, 247, 249, 0.8), rgba(246, 247, 249, 0.8)), url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1564049481/bg-clouds.jpg) no-repeat center;
+            background-size: cover;
+            padding-left: 520px;
+            padding-top: 150px;
+        }
+        .text-align  {
+            text-align: center;
+            padding-right: 0px !important;
+        }
+		.user_card {
+			height: 600px;
+			width: 400px;
+			margin-top: auto;
+			margin-bottom: auto;
+            background: linear-gradient(rgba(35, 43, 85, 0.75), rgba(35, 43, 85, 0.95)), url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1564049481/bg-clouds.jpg) no-repeat center center;
+            position: relative;
+			display: inline-block;
+			justify-content: center;
+			flex-direction: column;
+			padding-left: 100px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 10px;
+
+		}
+		.brand_logo_container {
+			position: absolute;
+			height: 170px;
+			width: 170px;
+			top: -75px;
+			border-radius: 50%;
+			background: #60a3bc;
+			padding: 10px;
+			text-align: center;
+		}
+	
+		.form_container {
+            margin-top: 100px;
+            text-align: center;
+           
+            padding-right: 117px;
+            color: gray;
+            font-size: 15px;
+		}
+		.login_btn {
+            width: 105px;
+            height: 30px;
+			background: #5aa8e9 !important;
+            color: white !important;
+            margin-left: -30px;
+            border-radius: 5px;
+            padding-right: 5px;
+            box-shadow: 0 2px 2px 0 #171724 
+		}
+		.login_btn:focus {
+			box-shadow: none !important;
+			outline: 0px !important;
+		}
+		.login_container {
+			padding: 0 7rem;
+		}
+	
+		.input_user, .input_pass {
+			box-shadow: none !important;
+            outline: 0px !important;
+            height: 30px;
+            width: 200px;
+            border-radius: 5px;
+            
+		}
+		
+        .mt-4 {
+            color: #5aa8e9;
+            font-size: 18px;
+            text-align: center;
+            padding-top: 125px;
+            padding-right: 70px;
+        }
+        button.btn_sign {
+            background: #5aa8e9 !important;
+            color: white !important;
+            margin-left: -55px;
+            border-radius: 5px;
+            padding-right: 5px;
+            box-shadow: 0 2px 2px 0 #171724 
+        }
+        .justify-content-center a {
+            font-size: 10px;
+            color: #d6afaf;
+            padding-right: 55px;
+            padding-top: 20px;
+        }
+        .signUp {
+            padding-right: 40px;
+        }
